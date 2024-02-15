@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.118.2" />
+    <title>Accusoft</title>
+
+    <!-- Bootstrap -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Jquery -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/color-modes.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+    <!-- Styles -->
+    <link href="dashboard/index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header
+      class="d-flex p-3 justify-content-between align-items-center border-bottom border-4 border-light-subtle"
+    >
+      <div class="d-flex">
+        <button
+          class="btn me-2 p-0 border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <h3 class="mb-0">Dashboard</h3>
+      </div>
+
+      <form class="d-flex" role="search">
+        <div
+          class="d-flex bg-white p-2 h-60 rounded-pill border border-2 border-light-subtle"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search ms-1 mt-1 text-body-tertiary"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
+          <input
+            type="text"
+            class="float-start ps-2 fs-6 bg-transparent shadow-none border-0"
+            placeholder="Search"
+          />
+        </div>
+      </form>
+
+      <div class="d-flex align-items-center">
+        <img
+          class="me-2 img-fluid rounded-circle bg-white"
+          style="width: 3rem; height: 3rem"
+          src="../public/perfil.png"
+          alt="perfil icon"
+        />
+        <div class="d-flex flex-column mb-0">
+          <span class="fs-5 fw-bolder">John Doe</span>
+          <span class="fw-light text-body-tertiary">Super admin</span>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="offcanvas offcanvas-start"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      tabindex="-1"
+      id="offcanvasScrolling"
+      aria-labelledby="offcanvasScrollingLabel"
+    >
+      <div
+        class="offcanvas-header bkgr justify-content-start align-items-center text-white"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          class="bi bi-boxes"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434zM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21zM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z"
+          />
+        </svg>
+        <h5 class="offcanvas-title ms-2" id="offcanvasScrollingLabel">
+          Accusoft
+        </h5>
+      </div>
+      <div class="offcanvas-body pe-0 bkgr" id="navbarButtonsContainer">
+        <button
+          class="p-2 mb-2 w-100 text-start border-0 rounded-start-pill bg-white txtPink"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-easel-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046z"
+            />
+          </svg>
+          Dashboard
+        </button>
+      </div>
+    </div>
+
+    <main id="mainContent" class="p-3">
+      <div id="dashboardContent">
+        <h4 class="bkgrGradTitle p-2 text-white">Indicadores</h4>
+
+        <table class="table table-borderless table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Tipo de Nota</th>
+              <th scope="col">Valor Total</th>
+            </tr>
+          </thead>
+          <tbody id="total-table"></tbody>
+        </table>
+
+        <div class="row my-3">
+          <div class="col-6">
+            <h4 class="bkgrGradTitle p-2 text-white">
+              Gráfico evolução da inadimplência
+            </h4>
+            <canvas id="inadimplenciaChart"></canvas>
+          </div>
+          <div class="col-6">
+            <h4 class="bkgrGradTitle p-2 text-white">
+              Gráfico evolução da receita
+            </h4>
+            <canvas id="receitaChart"></canvas>
+          </div>
+        </div>
+        <h4 class="bkgrGradTitle p-2 text-white">Nota emitidas</h4>
+
+        <table id="dtBasicExample" class="table table-borderless table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Nome</th>
+              <th scope="col">Número da nota</th>
+              <th scope="col">Data de emissão</th>
+              <th scope="col">Data de cobrança</th>
+              <th scope="col">Data do pagamento</th>
+              <th scope="col">Valor da nota</th>
+              <th scope="col">Documento da nota fiscal</th>
+              <th scope="col">Documento do boleto bancário</th>
+              <th scope="col">Status da nota</th>
+            </tr>
+          </thead>
+          <tbody id="table-notas" class="table-group-divider"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="dashboard/pagesContent.js"></script>
+  </body>
+</html>
