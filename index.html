@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
-    <meta
-      name="author"
-      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
-    />
+
     <meta name="generator" content="Hugo 0.118.2" />
     <title>Accusoft</title>
 
@@ -29,7 +26,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
 
     <!-- Styles -->
-    <link href="dashboard/index.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
   </head>
   <body>
     <header
@@ -125,76 +122,16 @@
           Accusoft
         </h5>
       </div>
-      <div class="offcanvas-body pe-0 bkgr" id="navbarButtonsContainer">
-        <button
-          class="p-2 mb-2 w-100 text-start border-0 rounded-start-pill bg-white txtPink"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-easel-fill"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046z"
-            />
-          </svg>
-          Dashboard
-        </button>
-      </div>
+      <div
+        class="offcanvas-body pe-0 bkgr hv-100"
+        id="navbarButtonsContainer"
+      ></div>
     </div>
 
-    <main id="mainContent" class="p-3">
-      <div id="dashboardContent">
-        <h4 class="bkgrGradTitle p-2 text-white">Indicadores</h4>
-
-        <table class="table table-borderless table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Tipo de Nota</th>
-              <th scope="col">Valor Total</th>
-            </tr>
-          </thead>
-          <tbody id="total-table"></tbody>
-        </table>
-
-        <div class="row my-3">
-          <div class="col-6">
-            <h4 class="bkgrGradTitle p-2 text-white">
-              Gráfico evolução da inadimplência
-            </h4>
-            <canvas id="inadimplenciaChart"></canvas>
-          </div>
-          <div class="col-6">
-            <h4 class="bkgrGradTitle p-2 text-white">
-              Gráfico evolução da receita
-            </h4>
-            <canvas id="receitaChart"></canvas>
-          </div>
-        </div>
-        <h4 class="bkgrGradTitle p-2 text-white">Nota emitidas</h4>
-
-        <table id="dtBasicExample" class="table table-borderless table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Nome</th>
-              <th scope="col">Número da nota</th>
-              <th scope="col">Data de emissão</th>
-              <th scope="col">Data de cobrança</th>
-              <th scope="col">Data do pagamento</th>
-              <th scope="col">Valor da nota</th>
-              <th scope="col">Documento da nota fiscal</th>
-              <th scope="col">Documento do boleto bancário</th>
-              <th scope="col">Status da nota</th>
-            </tr>
-          </thead>
-          <tbody id="table-notas" class="table-group-divider"></tbody>
-        </table>
-      </div>
-    </main>
-
-    <script src="dashboard/pagesContent.js"></script>
+    <main id="mainContent" class="p-3"></main>
+    <script src="public/dataBase.js"></script>
+    <script src="dashboard/index.js"></script>
+    <script src="underConstruction/index.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
