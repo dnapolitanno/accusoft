@@ -45,23 +45,23 @@ const months = [
   "Novembrer",
   "December",
 ];
-const defaultPerMonth = Array(12).fill(0);
-let revenuePerMonth = {};
+const defaultPerMonthValues = Array(12).fill(0);
+let revenuePerMonthValues = {};
 
 months.forEach((mes) => {
-  revenuePerMonth[mes] = 0;
+  revenuePerMonthValues[mes] = 0;
 });
 
 faxSummary.forEach((fax) => {
   const billingDate = new Date(fax.billingDate);
   if (fax.taxStatus === "Delayed") {
-    defaultPerMonth[billingDate.getMonth()]++;
+    defaultPerMonthValues[billingDate.getMonth()]++;
   }
   if (fax.paymentDate && fax.taxStatus == "Paid") {
     const paymentDate = new Date(fax.paymentDate);
     const paymentMonth = months[paymentDate.getMonth()];
 
-    revenuePerMonth[paymentMonth] += fax.taxValue;
+    revenuePerMonthValues[paymentMonth] += fax.taxValue;
   }
 });
 
@@ -174,7 +174,7 @@ function initializeCharts() {
       datasets: [
         {
           label: "Default per month",
-          data: defaultPerMonth,
+          data: defaultPerMonthValues,
           backgroundColor: "rgba(219,48,130,1)",
           borderWidth: 1,
         },
@@ -196,7 +196,7 @@ function initializeCharts() {
       datasets: [
         {
           label: "Revenue per month",
-          data: Object.values(revenuePerMonth),
+          data: Object.values(revenuePerMonthValues),
           backgroundColor: "rgba(219,48,130,1)",
           borderWidth: 1,
         },

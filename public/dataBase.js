@@ -19,7 +19,7 @@ const faxSummary = [
     taxValue: 180.0,
     invoiceDoc: "NF456789",
     docBankSlip: "BB678901",
-    taxStatus: "Paid",
+    taxStatus: "Delayed",
   },
   {
     payerName: "Lucas Silva",
@@ -30,7 +30,7 @@ const faxSummary = [
     taxValue: 150.0,
     invoiceDoc: "NF135792",
     docBankSlip: "BB234567",
-    taxStatus: "Paid",
+    taxStatus: "Delayed",
   },
   {
     payerName: "Carla Santos",
@@ -41,7 +41,7 @@ const faxSummary = [
     taxValue: 150.0,
     invoiceDoc: "NF246813",
     docBankSlip: "BB345678",
-    taxStatus: "Paid",
+    taxStatus: "Delayed",
   },
   {
     payerName: "Fernanda Oliveira",
@@ -74,7 +74,7 @@ const faxSummary = [
     taxValue: 250.0,
     invoiceDoc: "NF246813",
     docBankSlip: "BB345678",
-    taxStatus: "Paid",
+    taxStatus: "Delayed",
   },
   {
     payerName: "Ana Oliveira",
@@ -140,7 +140,7 @@ const faxSummary = [
     taxValue: 200.0,
     invoiceDoc: "NF123456",
     docBankSlip: "BB987654",
-    taxStatus: "Paid",
+    taxStatus: "Delayed",
   },
   {
     payerName: "Amanda Costa",
@@ -151,7 +151,7 @@ const faxSummary = [
     taxValue: 300.0,
     invoiceDoc: "NF987654",
     docBankSlip: "BB012345",
-    taxStatus: "Paid",
+    taxStatus: "Delayed",
   },
   {
     payerName: "Beatriz Oliveira",
